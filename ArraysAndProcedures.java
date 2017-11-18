@@ -43,13 +43,13 @@ public class ArraysAndProcedures {
 
 	public static void replaceLast(int x, int y, int[] ar) {
 		// TODO Aufgabe b)
-		int q = 0;
-		for (int i = 0; i < ar.length; i++) {
+		// fängt vom Ende an.
+		for (int i = ar.length - 1; i >= 0; i--) {
 			if (ar[i] == x) {
-				q = i;
+				ar[i] = y;
+				break;
 			}
 		}
-		ar[q] = y;
 
 	}
 
