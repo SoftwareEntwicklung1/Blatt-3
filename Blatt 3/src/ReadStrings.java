@@ -19,8 +19,6 @@ public class ReadStrings {
 		}
 		return s;
 	}
-
-	// vergrößert die Länge des Arrays um 1
 	public static String[] arrayrplus1(String[] array) {
 		String[] newarray = new String[array.length + 1];
 		for (int i = 0; i < array.length; i++) {
