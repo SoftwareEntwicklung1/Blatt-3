@@ -7,6 +7,7 @@ public class SqrtTable{
        System.out.printf("%s",",");
        System.out.printf("%.2f",c);
        System.out.println();
+   //   verbesserung
      }
 
     }
