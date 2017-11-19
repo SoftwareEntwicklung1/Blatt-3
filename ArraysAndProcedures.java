@@ -8,18 +8,21 @@ public class ArraysAndProcedures {
 		int[] ar = { 1, 2, 2, 2, 3, 2, 5 };
 		replaceAll(2, 7, ar);
 		System.out.println(Arrays.toString(ar));
+		
 		// Testen von Aufgabenteil c)
 		System.out.println("Aufgabe c");
 		// ar={ 1, 7,7,7, 3, 7, 5 }; after replace all
 		int[] ar2 = substAll(7, 2, ar);
 		System.out.println(Arrays.toString(ar));
 		System.out.println(Arrays.toString(ar2));
+		
 		// Testen von Aufgabenteil d
 		System.out.println("Aufgabe d");
 		int[] a1 = { 1, 3, 2, 4, 7, 2 };
 		int[] a2 = onlyEven(a1);
 		System.out.println(Arrays.toString(a1));
 		System.out.println(Arrays.toString(a2));
+		
 		// Testen von Aufgabenteil e
 		System.out.println("Aufgabe e");
 		int[][] b1 = { { 1, 2, 0 }, { 0, 7 }, { 7, 0, 7 } };
@@ -64,7 +67,7 @@ public class ArraysAndProcedures {
 
 	}
 
-	// Erstellen Sie eine Kopie des Arrays und ersetzen Sie alle x durch y in
+	// Erstellet eine Kopie des Arrays und ersetzt alle x durch y in
 	// der Kopie,Return Kopie
 	public static int[] substAll(int x, int y, int[] ar) {
 		// TODO Aufgabe c)
