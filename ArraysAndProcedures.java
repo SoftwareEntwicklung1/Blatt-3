@@ -78,7 +78,7 @@ public class ArraysAndProcedures {
 		return b;
 	}
 
-	// Gibt ein Array zurück, das nur gerade Elemente von ar enthält.
+	// Gibt ein Array zuruck, das nur gerade Elemente von ar enthalt.
 	public static int[] onlyEven(int[] ar) {
 		// TODO Aufgabe d)
 		int j = 0;
@@ -98,7 +98,7 @@ public class ArraysAndProcedures {
 		return b;
 	}
 
-	// prüft, ob alle Arrays in 2d Array die Zahl 0 enthalten
+	// pruft, ob alle Arrays in 2d Array die Zahl 0 enthalten
 	public static boolean allHaveZero(int[][] arrays) {
 		// TODO Aufgabe e)
 		for (int i = 0; i < arrays.length; i++) {
