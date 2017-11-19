@@ -4,24 +4,33 @@ public class ArraysAndProcedures {
 
 	public static void main(String[] args) {
 		// Testen von Aufgabenteil a)
-		int[] ar = { 1, 2, 3, 4, 5 };
+		System.out.println("Aufgabe a");
+		int[] ar = { 1, 2, 2, 2, 3, 2, 5 };
 		replaceAll(2, 7, ar);
 		System.out.println(Arrays.toString(ar));
-		// Testen
-		System.out.println("nextAufgabe");
-		int[] ar2 = substAll(2, 7, ar);
+		// Testen von Aufgabenteil c)
+		System.out.println("Aufgabe c");
+		// ar={ 1, 7,7,7, 3, 7, 5 }; after replace all
+		int[] ar2 = substAll(7, 2, ar);
+		System.out.println(Arrays.toString(ar));
 		System.out.println(Arrays.toString(ar2));
+		// Testen von Aufgabenteil d
+		System.out.println("Aufgabe d");
 		int[] a1 = { 1, 3, 2, 4, 7, 2 };
-		int[] ar3 = onlyEven(a1);
-		System.out.println(Arrays.toString(ar3));
-		// Testen e
-		System.out.println("nextAufgabe e");
+		int[] a2 = onlyEven(a1);
+		System.out.println(Arrays.toString(a1));
+		System.out.println(Arrays.toString(a2));
+		// Testen von Aufgabenteil e
+		System.out.println("Aufgabe e");
 		int[][] b1 = { { 1, 2, 0 }, { 0, 7 }, { 7, 0, 7 } };
-		int[][] b2 = { { 1, 2, 0 }, { 4, 5, 6 } };
+		int[][] b2 = { { 1, 2, 0 }, { 4, 5, 6 }, { 1, 2, 0 } };
+		System.out.println(Arrays.deepToString(b1));
 		System.out.println(allHaveZero(b1));
+		System.out.println(Arrays.deepToString(b2));
 		System.out.println(allHaveZero(b2));
 	}
 
+	// Ersetzt jedes vorhandene Element x im Array in y.
 	public static void replaceAll(int x, int y, int[] ar) {
 		// TODO Aufgabe a)
 		for (int i = 0; i < ar.length; i++) {
@@ -31,6 +40,7 @@ public class ArraysAndProcedures {
 		}
 	}
 
+	// Ersetzt das erste vorhandene Element x im Array in y.
 	public static void replaceFirst(int x, int y, int[] ar) {
 		// TODO Aufgabe b)
 		for (int i = 0; i < ar.length; i++) {
@@ -41,9 +51,10 @@ public class ArraysAndProcedures {
 		}
 	}
 
+	// Ersetzt das letzte vorhandene Element x im Array in y.
 	public static void replaceLast(int x, int y, int[] ar) {
 		// TODO Aufgabe b)
-		// fängt vom Ende an.
+		// Replaces only last Element (fängt vom Ende an)
 		for (int i = ar.length - 1; i >= 0; i--) {
 			if (ar[i] == x) {
 				ar[i] = y;
@@ -53,6 +64,8 @@ public class ArraysAndProcedures {
 
 	}
 
+	// Erstellen Sie eine Kopie des Arrays und ersetzen Sie alle x durch y in
+	// der Kopie,Return Kopie
 	public static int[] substAll(int x, int y, int[] ar) {
 		// TODO Aufgabe c)
 		int[] b = new int[ar.length];
@@ -65,6 +78,7 @@ public class ArraysAndProcedures {
 		return b;
 	}
 
+	// Gibt ein Array zurück, das nur gerade Elemente von ar enthält.
 	public static int[] onlyEven(int[] ar) {
 		// TODO Aufgabe d)
 		int j = 0;
@@ -81,10 +95,10 @@ public class ArraysAndProcedures {
 				q++;
 			}
 		}
-
 		return b;
 	}
 
+	// prüft, ob alle Arrays in 2d Array die Zahl 0 enthalten
 	public static boolean allHaveZero(int[][] arrays) {
 		// TODO Aufgabe e)
 		for (int i = 0; i < arrays.length; i++) {
@@ -92,11 +106,12 @@ public class ArraysAndProcedures {
 				if (arrays[i][j] == 0) {
 					break;
 				}
-				if (j == arrays[i].length - 1) {
+				// wenn das Ende des inneren Arrays erreicht ist und keine 0
+				// gefunden wurde
+				else if (j == arrays[i].length - 1) {
 					return false;
 				}
 			}
-
 		}
 		return true;
 	}

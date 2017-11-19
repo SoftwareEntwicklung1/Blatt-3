@@ -4,21 +4,22 @@ import java.util.Arrays;
 public class ReadStrings {
 	static String[] readStrings() {
 		String[] s = new String[1];
-		int i = 0;
-		if(StdIn.isEmpty()) {
-			s[0]="";
-			return s;
-		}
-		while (!StdIn.isEmpty()) {
+		// falls nichts eingegeben wird sollte das erste Element leer sein
+		// anstatt null
+		s[0] = "";
+		// keep Readingstring till empty
+		for (int i = 0; !StdIn.isEmpty(); i++) {
+			// wenn i ==s.length, das bedeutet out of bound durch 1
+			// ,deshalb Länge um 1 erhöhen
 			if (i == s.length) {
 				s = arrayrplus1(s);
 			}
 			s[i] = StdIn.readString();
-			i = i + 1;
-
 		}
 		return s;
 	}
+
+	// vergrößert die Länge des Arrays um 1
 	public static String[] arrayrplus1(String[] array) {
 		String[] newarray = new String[array.length + 1];
 		for (int i = 0; i < array.length; i++) {
@@ -32,4 +33,3 @@ public class ReadStrings {
 		System.out.println(Arrays.toString(b));
 	}
 }
-
