@@ -54,7 +54,7 @@ public class ArraysAndProcedures {
 	// Ersetzt das letzte vorhandene Element x im Array in y.
 	public static void replaceLast(int x, int y, int[] ar) {
 		// TODO Aufgabe b)
-		// Replaces only last Element (fängt vom Ende an)
+		// Replaces only last Element (fangt vom Ende an)
 		for (int i = ar.length - 1; i >= 0; i--) {
 			if (ar[i] == x) {
 				ar[i] = y;
